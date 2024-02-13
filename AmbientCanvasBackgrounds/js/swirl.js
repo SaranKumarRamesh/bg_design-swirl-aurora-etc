@@ -11,7 +11,7 @@ const rangeSpeed = 2;
 const baseRadius = 1;
 const rangeRadius = 4;
 const baseHue = 220;
-const rangeHue = 100;
+const rangeHue = 50;
 const noiseSteps = 8;
 const xOff = 0.00125;
 const yOff = 0.00125;
@@ -110,7 +110,12 @@ function drawParticle(x, y, x2, y2, life, ttl, radius, hue) {
   ctx.a.save();
   ctx.a.lineCap = 'round';
   ctx.a.lineWidth = radius;
-  ctx.a.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+
+  // The below line indicates how you change color only if you want white set saturation in 
+  // below to 0 and light to 100  and if you want anyother color you can change basehue in
+  // line #13
+  
+  ctx.a.strokeStyle = `hsla(${hue},0%,100%,${fadeInOut(life, ttl)})`;
   ctx.a.beginPath();
   ctx.a.moveTo(x, y);
   ctx.a.lineTo(x2, y2);

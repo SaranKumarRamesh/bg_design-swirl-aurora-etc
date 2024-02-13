@@ -77,18 +77,6 @@ a:focus {
 	z-index: 1000;
 }
 
-.frame__title {
-	font-size: 1rem;
-	margin: 0 0 1rem;
-	font-weight: normal;
-}
-
-.frame__links {
-	display: inline;
-}
-
-.frame__github,
-.frame__links a:not(:last-child),
 .frame__demos a:not(:last-child) {
 	margin-right: 1rem;
 }
@@ -149,28 +137,13 @@ a:focus {
 							'... ... ...'
 							'github demos links';
 	}
-	.frame__title-wrap {
-		grid-area: title;
-		display: flex;
-	}
-	.frame__title {
-		margin: 0;
-	}
-	.frame__github {
-		grid-area: github;
-		justify-self: start;
-		margin: 0;
-	}
+
 	.frame__demos {
 		margin: 0;
 		grid-area: demos;
 		justify-self: center;
 	}
-	.frame__links {
-		grid-area: links;
-		padding: 0;
-		justify-self: end;
-	}
+	
 	.frame a {
 		pointer-events: auto;
 	}
